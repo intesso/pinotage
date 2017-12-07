@@ -1,0 +1,27 @@
+{
+  "name": "pinotage",
+  "version": "1.0.0",
+  "description": "small wrapper around pino logger that adds callsite logging context",
+  "main": "index.js",
+  "scripts": {
+    "test": "node example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intesso/pinotage.git"
+  },
+  "keywords": [
+    "pino",
+    "callsite",
+    "context"
+  ],
+  "author": "Andi Neck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/intesso/pinotage/issues"
+  },
+  "homepage": "https://github.com/intesso/pinotage#readme",
+  "dependencies": {
+    "callee": "^1.1.0"
+  }
+}
