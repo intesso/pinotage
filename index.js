@@ -12,6 +12,7 @@ function pinotage (opts, stream) {
     istream = iopts
     iopts = {}
   }
+  if (typeof iopts === 'string') iopts = {callee: iopts}
   iopts = iopts || {}
   var copts = iopts.callee || 3
   istream = istream || process.stdout

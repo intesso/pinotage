@@ -1,5 +1,6 @@
 
-const logger = require('./index')()
+const Pinotage = require('./index')
+const logger = Pinotage()
 
 // log from global context
 logger.info('bushvine')
@@ -8,6 +9,7 @@ logger.info('bushvine')
 function myFunction () {
   logger.info('stellenbosch')
 }
+myFunction.print = () => Pinotage('MyClass').error('draught')
 myFunction()
 
 // log within arrow function
@@ -20,6 +22,9 @@ class MyClass {
     logger.info('kanonkop')
   }
 
-  print () { logger.info('bellingham') }
+  print () { 
+    logger.info('bellingham')
+    myFunction.print()
+  }
 }
 new MyClass().print()
